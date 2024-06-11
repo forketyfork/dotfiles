@@ -10,12 +10,12 @@ files="vimrc"               # list of files/folders to symlink in homedir
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
-mkdir -p $olddir
+mkdir -p "$olddir"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
     echo "Moving $file from ~ to $olddir"
-    mv ~/.$file $olddir
+    mv "$HOME/.$file" "$olddir"
     echo "Creating symlink to $file in home directory"
-    ln -s $dir/$file ~/.$file
+    ln -s "$dir/$file" "$HOME/.$file"
 done
