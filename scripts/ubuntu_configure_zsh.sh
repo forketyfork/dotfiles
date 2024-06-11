@@ -20,11 +20,11 @@ fi
 
 # download the Iosevka font
 echo "Downloading and installing the IosevkaTerm font"
-wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/$nerdfonts_version/$font.zip
+wget -O ~/.local/share/fonts/$font.zip https://github.com/ryanoasis/nerd-fonts/releases/download/$nerdfonts_version/$font.zip
 cd ~/.local/share/fonts
-unzip $font.zip
+unzip -o $font.zip
 rm $font.zip
 fc-cache -fv
 
 # install the Iosevka font as the terminal default
-dconf write /org/gnome/terminal/legacy/profiles:/:"$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")"/font "'IosevkaTerm Nerd Font 12'"
+dconf write /org/gnome/terminal/legacy/profiles:/:"$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")"/font "'$font Nerd Font 12'"
