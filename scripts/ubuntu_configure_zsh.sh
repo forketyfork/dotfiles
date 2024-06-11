@@ -25,3 +25,6 @@ cd ~/.local/share/fonts
 unzip $font.zip
 rm $font.zip
 fc-cache -fv
+
+# install the Iosevka font as the terminal default
+dconf write /org/gnome/terminal/legacy/profiles:/:"$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")"/font "'IosevkaTerm Nerd Font 12'"
