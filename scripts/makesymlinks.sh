@@ -1,8 +1,8 @@
 #!/bin/bash
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 
-# Exit immediately on a non-zero exit code, fail on unknown variables, prevent masking of errors in a pipeline
-set -euo pipefail
+# Exit immediately on a non-zero exit code, fail on unknown variables
+set -eu
 
 dir=~/dotfiles              # dotfiles directory
 olddir=~/dotfiles_old       # old dotfiles backup directory
