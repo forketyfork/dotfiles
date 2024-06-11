@@ -19,7 +19,7 @@ else
 fi
 
 # download the Iosevka font
-cho "Downloading and installing the IosevkaTerm font"
+echo "Downloading and installing the IosevkaTerm font"
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/$nerdfonts_version/$font.zip
 cd ~/.local/share/fonts
 unzip $font.zip
