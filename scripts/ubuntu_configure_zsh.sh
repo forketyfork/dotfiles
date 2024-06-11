@@ -12,10 +12,10 @@ echo "Setting zsh as the default shell"
 chsh -s "$(which zsh)"
 
 if [ ! -d ~/.oh-my-zsh ]; then
-    echo "Installing oh-my-zsh"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	echo "Installing oh-my-zsh"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
-    echo "oh-my-zsh is already installed, skipping"
+	echo "oh-my-zsh is already installed, skipping"
 fi
 
 # download the Iosevka font
