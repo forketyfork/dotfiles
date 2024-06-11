@@ -1,8 +1,8 @@
 #!/bin/sh
 # Installation of vim-pathogen and vim bundles
 
-# Exit immediately on a non-zero exit code
-set -e
+# Exit immediately on a non-zero exit code, fail on unknown variables, prevent masking of errors in a pipeline
+set -euo pipefail
 
 # Install vim-pathogen
 echo "Creating required vim configuration directories"
