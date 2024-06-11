@@ -2,6 +2,7 @@
 # Install required packages using apt
 # Tested on Ubuntu 22.04
 
+
 # Exit immediately on a non-zero exit code, fail on unknown variables
 set -eu
 
