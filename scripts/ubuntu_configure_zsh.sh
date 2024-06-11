@@ -20,6 +20,7 @@ fi
 
 # download the Iosevka font
 echo "Downloading and installing the IosevkaTerm font"
+mkdir -p ~/.local/share/fonts
 wget -O ~/.local/share/fonts/$font.zip https://github.com/ryanoasis/nerd-fonts/releases/download/$nerdfonts_version/$font.zip
 cd ~/.local/share/fonts
 unzip -o $font.zip
