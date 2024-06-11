@@ -14,11 +14,11 @@ mkdir -p "$olddir"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
-    if [ -f ".$file" ]; then
-	    echo "Moving .$file from ~ to $olddir"
-    	rm -f "$olddir/.$file"
-    	mv "$HOME/.$file" "$olddir"
-    fi
+	if [ -f "$HOME/.$file" ]; then
+		echo "Moving .$file from ~ to $olddir"
+		rm -f "$olddir/.$file"
+		mv "$HOME/.$file" "$olddir"
+	fi
 	echo "Creating symlink to $file in home directory"
 	ln -s "$dir/$file" "$HOME/.$file"
 done
