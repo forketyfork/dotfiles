@@ -3,6 +3,10 @@
 
 set -eu
 
+# variables
+font=IosevkaTerm
+nerdfonts_version=v3.2.1
+
 # make zsh the default shell
 echo "Setting zsh as the default shell"
 chsh -s "$(which zsh)"
@@ -15,9 +19,9 @@ else
 fi
 
 # download the Iosevka font
-echo "Downloading and installing the IosevkaTerm font"
-wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/IosevkaTerm.zip
+cho "Downloading and installing the IosevkaTerm font"
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/$nerdfonts_version/$font.zip
 cd ~/.local/share/fonts
-unzip JetBrainsMono.zip
-rm JetBrainsMono.zip
+unzip $font.zip
+rm $font.zip
 fc-cache -fv
