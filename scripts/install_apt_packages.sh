@@ -5,7 +5,7 @@
 # Exit immediately on a non-zero exit code, fail on unknown variables
 set -eu
 
-sudo apt-get update && \
-    sudo apt-get upgrade -y && \
-    sudo apt-get dist-upgrade -y && \
-    sudo apt-get install vim git
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
+sudo apt-get install vim git zsh -y
