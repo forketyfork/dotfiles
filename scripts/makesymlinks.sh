@@ -21,5 +21,5 @@ for file in $files; do
 		mv "$HOME/.$file" "$olddir"
 	fi
 	echo "Creating symlink to $file in home directory"
-	ln -s "$dir/$file" "$HOME/.$file"
+	ln -fs "$dir/$file" "$HOME/.$file"
 done
