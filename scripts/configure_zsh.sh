@@ -1,9 +1,9 @@
 #!/bin/sh
 # Configure zsh shell as default one
-set -e
+set -eu
 
 # make zsh the default shell
-case "$SHELL" in
+case "${SHELL:-}" in
 */bin/zsh)
 	echo "zsh is already the default shell, skipping"
 	;;

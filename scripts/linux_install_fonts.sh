@@ -1,7 +1,7 @@
 #!/bin/sh
 # Install the Nerd Font on Linux
 
-set -e
+set -eu
 
 # variables
 font=IosevkaTerm
@@ -22,7 +22,7 @@ else
 fi
 
 # install the Iosevka font as the terminal default
-if [ -z "$DISPLAY" ]; then
+if [ -z "${DISPLAY:-}" ]; then
 	echo "Skipping the $font Nerd Font installation as Terminal default, as no DISPLAY is set"
 else
 	echo "Installing the $font Nerd Font as default for the Terminal"
