@@ -9,7 +9,7 @@ case "${SHELL:-}" in
 	;;
 *)
 	echo "Setting zsh as the default shell"
-	chsh -s "$(which zsh)"
+	sudo chsh -s "$(which zsh)"
 	;;
 esac
 
