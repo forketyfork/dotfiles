@@ -20,13 +20,15 @@ fi
 
 # download the Iosevka font
 if [ ! -f $font_dir/"$font"NerdFont-Regular.ttf ]; then
-	echo "Downloading and installing the IosevkaTerm font"
+	echo "Downloading and installing the $font Nerd Font"
 	mkdir -p $font_dir
 	wget -O $font_dir/$font.zip https://github.com/ryanoasis/nerd-fonts/releases/download/$nerdfonts_version/$font.zip
 	cd $font_dir
 	unzip -o $font.zip
 	rm $font.zip
 	fc-cache -fv
+else
+	echo "Font $font already exists, skipping"
 fi
 
 # install the Iosevka font as the terminal default
