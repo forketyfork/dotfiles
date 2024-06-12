@@ -8,8 +8,12 @@ nerdfonts_version=v3.2.1
 font_dir=~/.local/share/fonts
 
 # make zsh the default shell
-echo "Setting zsh as the default shell"
-chsh -s "$(which zsh)"
+if [ "$SHELL" = /usr/bin/zsh ]; then
+	echo "zsh is already the default shell, skipping"
+else
+	echo "Setting zsh as the default shell"
+	chsh -s "$(which zsh)"
+fi
 
 if [ ! -d ~/.oh-my-zsh ]; then
 	echo "Installing oh-my-zsh"
