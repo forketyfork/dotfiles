@@ -1,5 +1,5 @@
 #!/bin/sh
-# Install the Nerd Font on Linux
+# Install the Nerd Font on Ubuntu
 
 set -eu
 
@@ -8,7 +8,12 @@ font=IosevkaTerm
 nerdfonts_version=v3.2.1
 font_dir=~/.local/share/fonts
 
-# download the Iosevka font
+if [ -z "${DISPLAY:-}" ]; then
+	echo "Skipping the $font Nerd Font installation and setup as Terminal default, as no DISPLAY is set"
+	exit 0
+fi
+
+# download the font
 if [ ! -f $font_dir/"$font"NerdFont-Regular.ttf ]; then
 	echo "Downloading and installing the $font Nerd Font"
 	mkdir -p $font_dir
@@ -21,10 +26,6 @@ else
 	echo "Font $font already exists, skipping"
 fi
 
-# install the Iosevka font as the terminal default
-if [ -z "${DISPLAY:-}" ]; then
-	echo "Skipping the $font Nerd Font installation as Terminal default, as no DISPLAY is set"
-else
-	echo "Installing the $font Nerd Font as default for the Terminal"
-	dconf write /org/gnome/terminal/legacy/profiles:/:"$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")"/font "'$font Nerd Font 12'"
-fi
+# install the downloaded font as the terminal default
+echo "Installing the $font Nerd Font as default for the Terminal"
+dconf write /org/gnome/terminal/legacy/profiles:/:"$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")"/font "'$font Nerd Font 12'"
