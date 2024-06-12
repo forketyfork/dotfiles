@@ -22,4 +22,6 @@ else
 fi
 
 # install the Iosevka font as the terminal default
-dconf write /org/gnome/terminal/legacy/profiles:/:"$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")"/font "'$font Nerd Font 12'"
+if [ "$DISPLAY" != "" ]; then
+	dconf write /org/gnome/terminal/legacy/profiles:/:"$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")"/font "'$font Nerd Font 12'"
+fi
