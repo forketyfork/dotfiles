@@ -19,7 +19,7 @@ if [ ! -f $font_dir/"$font"NerdFont-Regular.ttf ]; then
 	mkdir -p $font_dir
 	wget -O $font_dir/$font.zip https://github.com/ryanoasis/nerd-fonts/releases/download/$nerdfonts_version/$font.zip
 	unzip -o $font_dir/$font.zip -d $font_dir
-	rm $font.zip
+	rm $font_dir/$font.zip
 	fc-cache -fv
 else
 	echo "Font $font already exists, skipping"
