@@ -1,6 +1,5 @@
 #!/bin/sh
 # Configure zsh shell as default one
-
 set -eu
 
 # variables
