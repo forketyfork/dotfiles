@@ -23,8 +23,8 @@ fi
 
 # install the Iosevka font as the terminal default
 if [ -z "${DISPLAY:+}" ]; then
+	echo "Skipping the $font Nerd Font installation as Terminal default, as no DISPLAY is set"
+else
 	echo "Installing the $font Nerd Font as default for the Terminal"
 	dconf write /org/gnome/terminal/legacy/profiles:/:"$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d "'")"/font "'$font Nerd Font 12'"
-else
-	echo "Skipping the $font Nerd Font installation as Terminal default, as no DISPLAY is set"
 fi
