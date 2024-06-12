@@ -10,7 +10,7 @@ font_dir=~/.local/share/fonts
 
 if [ -z "${DISPLAY:-}" ]; then
 	echo "Skipping the $font Nerd Font installation and setup as Terminal default, as no DISPLAY is set"
-	exit 0
+	return
 fi
 
 # download the font
@@ -18,7 +18,7 @@ if [ ! -f $font_dir/"$font"NerdFont-Regular.ttf ]; then
 	echo "Downloading and installing the $font Nerd Font"
 	mkdir -p $font_dir
 	wget -O $font_dir/$font.zip https://github.com/ryanoasis/nerd-fonts/releases/download/$nerdfonts_version/$font.zip
-	unzip -o $font_dir/$font.zip $font_dir
+	unzip -o $font_dir/$font.zip -d $font_dir
 	rm $font.zip
 	fc-cache -fv
 else
