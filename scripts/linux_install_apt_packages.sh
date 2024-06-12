@@ -6,7 +6,7 @@
 set -eu
 
 # install sudo if absent
-command -v sudo &>/dev/null || (apt-get update && apt-get install sudo -y)
+command -v sudo || (apt-get update && apt-get install sudo -y)
 
 sudo apt-get update
 sudo apt-get upgrade -y
