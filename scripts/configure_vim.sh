@@ -1,6 +1,5 @@
 #!/bin/sh
 # Installation of vim-pathogen and vim bundles
-
 # Exit immediately on a non-zero exit code, fail on unknown variables
 set -eu
 
