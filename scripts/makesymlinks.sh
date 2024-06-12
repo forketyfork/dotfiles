@@ -4,7 +4,7 @@
 # Exit immediately on a non-zero exit code, fail on unknown variables
 set -eu
 
-dir=~/dotfiles        # dotfiles directory
+dir="$(dirname "$0")" # dotfiles directory
 olddir=~/dotfiles_old # old dotfiles backup directory
 files="vimrc zshrc"   # list of files/folders to symlink in homedir
 
