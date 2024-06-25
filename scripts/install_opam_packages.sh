@@ -1,7 +1,8 @@
 #!/bin/sh
-# Install required opam packages
+# Configure opam and install required opam packages
 
 set -eu
 
-opam install core core_bench utop user-setup merlin ocamlformat
-opam user-setup install
+opam init -y
+eval "$(opam env)"
+opam install core core_bench utop -y
