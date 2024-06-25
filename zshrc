@@ -100,12 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ "$(uname)" = "Darwin" ]
-then
+if [ "$(uname)" = "Darwin" ]; then
     export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 fi
 
-if [ -f ~/.zshrc.local ]
-then
+if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
