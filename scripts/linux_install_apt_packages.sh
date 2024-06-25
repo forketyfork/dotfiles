@@ -11,4 +11,4 @@ command -v sudo || (apt-get update && apt-get install sudo -y)
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
-sudo apt-get install vim git zsh -y
+sudo apt-get install vim git zsh opam -y

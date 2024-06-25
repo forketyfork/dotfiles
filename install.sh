@@ -8,6 +8,7 @@ uname_result="$(uname)"
 exec_common_scripts() {
 	. scripts/configure_vim.sh
 	. scripts/configure_zsh.sh
+	. scripts/configure_opam.sh
 	. scripts/makesymlinks.sh
 }
 
