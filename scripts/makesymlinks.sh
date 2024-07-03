@@ -4,11 +4,11 @@
 # Exit immediately on a non-zero exit code, fail on unknown variables
 set -eu
 
-dir="$(dirname "$0")"         # dotfiles directory
-dir="$(realpath -- "$dir")"   # absolute path
-olddir=~/dotfiles_old         # old dotfiles backup directory
-files="vimrc zshrc ocamlinit" # list of files/folders to symlink in homedir
-config_dirs="nvim"            # list of .config folders to symlink in homedir
+dir="$(dirname "$0")"                  # dotfiles directory
+dir="$(realpath -- "$dir")"            # absolute path
+olddir=~/dotfiles_old                  # old dotfiles backup directory
+files="vimrc zshrc ocamlinit newsboat" # list of files/folders to symlink in homedir
+config_dirs="nvim"                     # list of .config folders to symlink in homedir
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
