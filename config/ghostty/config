@@ -1,2 +1,15 @@
-theme = Molokai
-font-family = yosevka
+theme = AlienBlood
+background-opacity = 0.8
+
+font-family = Iosevka NFM
+font-size = 14
+window-title-font-family = Iosevka NFM Bold
+
+cursor-style = block
+shell-integration-features = no-cursor
+cursor-opacity = 0.8
+cursor-click-to-move = true
+
+mouse-hide-while-typing = true
+
+window-save-state = always
