@@ -3,7 +3,6 @@ background-opacity = 1
 
 font-family = Iosevka NFM
 font-size = 14
-window-title-font-family = Iosevka NFM Bold
 
 cursor-style = block
 shell-integration-features = no-cursor
