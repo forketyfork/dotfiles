@@ -12,3 +12,6 @@ cursor-click-to-move = true
 mouse-hide-while-typing = true
 
 window-save-state = always
+
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+
