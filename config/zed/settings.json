@@ -7,5 +7,12 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "assistant": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "llama3.3:latest"
+    },
+    "version": "2"
+  },
   "buffer_font_size": 15
 }

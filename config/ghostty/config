@@ -13,5 +13,5 @@ mouse-hide-while-typing = true
 
 window-save-state = always
 
-keybind = global:cmd+grave_accent=toggle_quick_terminal
+keybind = global:cmd+escape=toggle_quick_terminal
 
