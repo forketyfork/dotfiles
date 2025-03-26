@@ -14,5 +14,6 @@
     },
     "version": "2"
   },
-  "buffer_font_size": 15
+  "buffer_font_size": 15,
+  "wrap_guides": [120]
 }
