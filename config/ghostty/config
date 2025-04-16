@@ -1,7 +1,7 @@
 theme = Argonaut
 background-opacity = 1
 
-font-family = Iosevka NFM
+font-family = VictorMono
 font-size = 14
 
 cursor-style = block

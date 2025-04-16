@@ -9,11 +9,16 @@
 {
   "assistant": {
     "default_model": {
-      "provider": "ollama",
-      "model": "llama3.3:latest"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
   "buffer_font_size": 15,
-  "wrap_guides": [120]
+  "wrap_guides": [120],
+  "terminal": {
+    "font_family": "VictorMono Nerd Font"
+  },
+  "ui_font_family": "VictorMono Nerd Font",
+  "buffer_font_family": "VictorMono Nerd Font"
 }
