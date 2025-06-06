@@ -21,3 +21,30 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
+
+-- enable syntax highlighting
+vim.opt.syntax = "on"
+-- auto-indent
+vim.opt.autoindent = true
+-- filetype detection
+vim.opt.filetype = "on"
+-- show line numbers
+vim.opt.number = true
+-- enables true color support
+vim.opt.termguicolors = true
+-- color scheme
+vim.cmd.colorscheme("gruvbox")
+-- tab spacing
+vim.opt.tabstop = 4
+-- unify
+vim.opt.softtabstop = 4
+-- indent/outdent by 4 columns
+vim.opt.shiftwidth = 4
+-- always indent/outdent to the nearest tabstop
+vim.opt.shiftround = true
+-- use spaces instead of tabs
+vim.opt.expandtab = true
+-- use tabs at the start of a line, spaces elsewhere
+vim.opt.smarttab = true
+
+
