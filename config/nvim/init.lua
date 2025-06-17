@@ -1,26 +1,19 @@
+-- lazy.vim package manager configuration and plugins
+require('config.lazy')
+
+-- LSP configuration
+require('config.lsp')
+
+-- Autocompletion setup
+require('config.cmp')
+
+-- Formatting setup
+require('config.conform')
+
 -- search and replace functionality
 vim.opt.ignorecase = true -- search case insensitive
 vim.opt.smartcase = true -- search matters if the string starts with a capital letter
 vim.opt.inccommand = "split" -- incremental search, show substitution preview
-
--- key bindings
-vim.g.mapleader = ","
-local keyset = vim.keymap.set
-keyset("n", "<leader>sr", ":%s/<C-r><C-w>//g<Left><Left>")
-
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-require("lazy").setup("plugins")
 
 -- enable syntax highlighting
 vim.opt.syntax = "on"
@@ -46,5 +39,13 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 -- use tabs at the start of a line, spaces elsewhere
 vim.opt.smarttab = true
+-- python host
+vim.g.python3_host_prog='/run/current-system/sw/bin/python'
 
+-- key bindings
+vim.g.mapleader = ","
+local keyset = vim.keymap.set
+keyset("n", "<leader>sr", ":%s/<C-r><C-w>//g<Left><Left>")
 
+-- show diagnostics on gh
+vim.keymap.set("n", "gh", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
