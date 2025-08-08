@@ -118,7 +118,7 @@ compinit
 # End of Docker CLI completions
 
 # Added by Windsurf
-export PATH="~/.codeium/windsurf/bin:$PATH"
+export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 
 # Cursor Agent
-export PATH="~/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
