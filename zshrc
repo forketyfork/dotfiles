@@ -122,3 +122,7 @@ export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 
 # Cursor Agent
 export PATH="$HOME/.local/bin:$PATH"
+
+## Exp 2025-08-11: timewarrior
+brew install timewarrior
+## /Exp
