@@ -1,8 +1,8 @@
 # Experiment Rollback
 
-## Week 0
+## [exp] 2025-08-11: timewarrior: local time tracker
 
-### [exp] TimeWarrior: local time tracker
+### Rollback steps
 
 ```shell
 brew uninstall timewarrior
@@ -11,3 +11,27 @@ rm -rf "$HOME/.config/timewarrior"
 rm -rf "$HOME/.local/share/timewarrior"
 ```
 
+### Verify
+
+```shell
+> timew
+zsh: command not found: timew
+```
+
+## [exp] 2025-08-11: Hammerspoon: track context switching
+
+### Rollback steps
+
+```shell
+brew uninstall hammerspoon
+brew cleanup
+rm -rf "$HOME/.hammerspoon"
+rm -rf "$HOME/.metrics"
+```
+
+### Verify
+
+```shell
+> ps aux | rg '[H]ammerspoon'
+[empty output]
+```
