@@ -35,3 +35,17 @@ rm -rf "$HOME/.metrics"
 > ps aux | rg '[H]ammerspoon'
 [empty output]
 ```
+
+## [exp] 2025-08-13: Conductor: run a bunch of Claude Codes in parallel
+### Rollback steps
+```shell
+brew uninstall conductor
+```
+- remove Conductor from third-party apps on GitHub: https://github.com/settings/applications
+
+### Verify
+```shell
+> ls /Applications/Conductor.app
+[empty output]
+```
+- Conductor is not at https://github.com/settings/applications
