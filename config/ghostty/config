@@ -15,3 +15,4 @@ window-save-state = always
 
 keybind = global:cmd+escape=toggle_quick_terminal
 
+keybind = shift+enter=text:\n
