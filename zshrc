@@ -129,6 +129,3 @@ brew install --quiet --cask hammerspoon
 mkdir -p "$HOME/.metrics"
 ## /[exp]
 
-## [exp] 2025-08-13: Conductor: run a bunch of Claude Codes in parallel
-brew install conductor
-## /[exp]
