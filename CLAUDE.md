@@ -13,6 +13,7 @@ This repository uses an experiment-based approach for testing new tools and conf
 3. **Testing phase**: Tools are tested in the experimental setup
 4. **Applying**: If successful, the tool installation is moved to the permanent nix-darwin configuration
 5. **Rolling back**: If unsuccessful, the tool can be cleanly removed using rollback steps
+6. IMPORTANT: if something goes not as planned, always ask for the user feedback by proposing the next steps 
 
 ### Custom Commands:
 

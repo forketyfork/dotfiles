@@ -12,7 +12,7 @@ This command creates a new experiment for testing tools before adding them to th
 
 1. Parse the experiment name and description from the user's input
 2. Get the current date in format YYYY-MM-DD
-3. Add the experiment to `.zshrc` with the appropriate experiment markers
+3. Add the experiment to `zshrc` with the appropriate experiment markers
 4. Document the experiment in `apply.md` with steps to apply it permanently
 5. Document the experiment in `rollback.md` with steps to cleanly remove it
 6. Provide a summary of what was created
@@ -23,7 +23,7 @@ When the user types: `/experiment jdk-24 "Install JDK 24"`
 
 The command should:
 
-1. Add to `.zshrc`:
+1. Add to `zshrc`:
 ```bash
 ## [exp] 2025-08-27: jdk-24: Install JDK 24
 brew install --quiet openjdk@24

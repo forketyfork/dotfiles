@@ -10,10 +10,10 @@ This command rolls back an experiment by removing it completely from the system.
 
 ## Steps
 
-1. Find the experiment in `.zshrc` or check if it's been applied to nix-darwin
+1. Find the experiment in `zshrc` or check if it's been applied to nix-darwin
 2. Find the rollback instructions in `rollback.md`
 3. Execute the rollback steps:
-   - If still in experimental phase: Remove from `.zshrc` and execute uninstall commands
+   - If still in experimental phase: Remove from `zshrc` and execute uninstall commands
    - If already applied: Remove from nix-darwin configuration and rebuild
 4. Verify the tool is no longer available
 5. Optionally remove the experiment documentation from `apply.md` and `rollback.md`
@@ -22,9 +22,9 @@ This command rolls back an experiment by removing it completely from the system.
 
 When the user types: `/rollback jdk-24`
 
-### Case 1: Experiment still in .zshrc
+### Case 1: Experiment still in zshrc
 
-1. Remove from `.zshrc`:
+1. Remove from `zshrc`:
 ```bash
 ## [exp] 2025-08-27: jdk-24: Install JDK 24
 brew install --quiet openjdk@24
@@ -71,7 +71,7 @@ which java      # Should return nothing
 
 ## Implementation Notes
 
-- Check both `.zshrc` and nix-darwin configuration to determine current state
+- Check both `zshrc` and nix-darwin configuration to determine current state
 - Execute appropriate rollback based on where the experiment exists
 - For brew packages, always run `brew cleanup` after uninstall
 - For nix-darwin changes, always rebuild after modifications

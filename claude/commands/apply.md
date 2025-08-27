@@ -10,13 +10,13 @@ This command applies an experiment permanently by moving its installation to the
 
 ## Steps
 
-1. Find the experiment in `.zshrc` by searching for the experiment name in experiment markers
+1. Find the experiment in `zshrc` by searching for the experiment name in experiment markers
 2. Find the corresponding apply steps in `apply.md`
 3. Based on the tool type, add it to the appropriate section in nix-darwin configuration:
    - For brew packages: Add to `nix/homebrew.nix`
    - For system packages: Add to `nix/system-packages.nix`
    - For shell configuration: Add to `nix/shell.nix`
-4. Remove the experiment section from `.zshrc`
+4. Remove the experiment section from `zshrc`
 5. Move the apply section from `apply.md` to the "Applied experiments" section
 6. Run the nix-darwin rebuild command to apply changes
 7. Verify the tool is still available
@@ -27,7 +27,7 @@ When the user types: `/apply jdk-24`
 
 The command should:
 
-1. Find and remove from `.zshrc`:
+1. Find and remove from `zshrc`:
 ```bash
 ## [exp] 2025-08-27: jdk-24: Install JDK 24
 brew install --quiet openjdk@24
