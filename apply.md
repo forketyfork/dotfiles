@@ -9,4 +9,7 @@
 - install Hammerspoon via nix-darwin configuration
 
 ## [exp] 2025-08-13: Conductor: run a bunch of Claude Codes in parallel
-- install Conductor via nix-darwin configuration
+- install Conductor in brew via nix-darwin configuration
+
+# Applied experiments
+
