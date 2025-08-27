@@ -4,5 +4,8 @@
   "model": "sonnet",
   "feedbackSurveyState": {
     "lastShownTime": 1754144264813
-  }
+  },
+  "additionalSourceRoots": [
+    "../nix-darwin-config"
+  ]
 }
