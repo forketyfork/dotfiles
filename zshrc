@@ -123,9 +123,6 @@ export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 # Cursor Agent
 export PATH="$HOME/.local/bin:$PATH"
 
-## [exp] 2025-08-11: timewarrior: local time tracker
-brew install --quiet timewarrior
-## /[exp]
 
 ## [exp] 2025-08-11: Hammerspoon: track content switching
 brew install --quiet --cask hammerspoon
