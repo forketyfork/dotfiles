@@ -123,6 +123,10 @@ export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 # Cursor Agent
 export PATH="$HOME/.local/bin:$PATH"
 
+# ngrok completions
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi
 
 ## [exp] 2025-08-11: Hammerspoon: track content switching
 brew install --quiet --cask hammerspoon
