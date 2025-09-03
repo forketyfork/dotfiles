@@ -1,6 +1,10 @@
-# dotfiles
+# Dotfiles
 
-These are my dotfiles.
+[![Build status](https://github.com/forketyfork/dotfiles/actions/workflows/build.yml/badge.svg)](https://github.com/forketyfork/dotfiles/actions/workflows/build.yml)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Shell](https://img.shields.io/badge/language-Shell-green.svg)](https://www.gnu.org/software/bash/)
+
+Personal dotfiles and configuration files for development environment setup.
 
 ## git hooks
 To install the pre-commit and post-commit hooks, after cloning, run the following command in the repository directory:

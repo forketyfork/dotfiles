@@ -1,0 +1,49 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Validate shell scripts
+      run: |
+        # Check if there are any shell scripts to validate
+        if find . -name "*.sh" -type f | grep -q .; then
+          # Install shellcheck
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+          
+          # Run shellcheck on all shell scripts
+          find . -name "*.sh" -type f -exec shellcheck {} +
+        else
+          echo "No shell scripts found to validate"
+        fi
+
+    - name: Test installation script
+      run: |
+        # Test that the main installation script runs without errors
+        if [ -f "install.sh" ]; then
+          # Make it executable and run it in dry-run mode if possible
+          chmod +x install.sh
+          # For safety, we'll just check syntax
+          bash -n install.sh
+          echo "install.sh syntax check passed"
+        else
+          echo "No install.sh found"
+        fi
+
+    - name: Check file permissions
+      run: |
+        # Verify that executable files have correct permissions
+        find . -name "*.sh" -type f ! -perm -u+x -exec echo "Warning: {} is not executable" \;
