@@ -137,6 +137,10 @@ mkdir -p "$HOME/.metrics"
 brew install --quiet --cask audacity
 ## /[exp]
 
+## [exp] 2025-09-10: opensnoop: Monitor file operations in real-time
+brew install --quiet opensnoop
+## /[exp]
+
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi

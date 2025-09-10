@@ -1,5 +1,21 @@
 # Experiment Rollback
 
+## [exp] 2025-09-10: opensnoop: Monitor file operations in real-time
+
+### Rollback steps
+
+```shell
+brew uninstall opensnoop
+brew cleanup
+```
+
+### Verify
+
+```shell
+> opensnoop
+zsh: command not found: opensnoop
+```
+
 ## [exp] 2025-09-04: audacity: Install Audacity audio editor
 
 ### Rollback steps

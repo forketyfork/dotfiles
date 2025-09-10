@@ -1,5 +1,9 @@
 # Apply steps for the experiments
 
+## [exp] 2025-09-10: opensnoop: Monitor file operations in real-time
+- add opensnoop to nix-darwin configuration homebrew.brews
+- verify opensnoop command is available system-wide
+
 ## [exp] 2025-09-04: audacity: Install Audacity audio editor
 - add audacity to nix-darwin configuration homebrew.casks
 
