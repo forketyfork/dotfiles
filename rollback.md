@@ -1,5 +1,21 @@
 # Experiment Rollback
 
+## [exp] 2025-09-04: audacity: Install Audacity audio editor
+
+### Rollback steps
+
+```shell
+brew uninstall --cask audacity
+brew cleanup
+```
+
+### Verify
+
+```shell
+> ls /Applications/Audacity.app
+ls: /Applications/Audacity.app: No such file or directory
+```
+
 ## [exp] 2025-08-11: timewarrior: local time tracker
 
 ### Rollback steps
