@@ -1,5 +1,8 @@
 # Apply steps for the experiments
 
+## [exp] 2025-09-04: audacity: Install Audacity audio editor
+- add audacity to nix-darwin configuration homebrew.casks
+
 ## [exp] 2025-08-11: Hammerspoon: track context switching
 - move `~/.hammerspoon/` to dotfiles
 - install Hammerspoon via nix-darwin configuration
