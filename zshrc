@@ -133,9 +133,6 @@ brew install --quiet --cask hammerspoon
 mkdir -p "$HOME/.metrics"
 ## /[exp]
 
-## [exp] 2025-09-04: audacity: Install Audacity audio editor
-brew install --quiet --cask audacity
-## /[exp]
 
 
 # The next line updates PATH for the Google Cloud SDK.
