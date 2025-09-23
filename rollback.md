@@ -1,5 +1,21 @@
 # Experiment Rollback
 
+## [exp] 2025-09-23: cursor-cli: Install Cursor CLI tool
+
+### Rollback steps
+
+```shell
+brew uninstall --cask cursor-cli
+brew cleanup
+```
+
+### Verify
+
+```shell
+> cursor --version
+zsh: command not found: cursor
+```
+
 ## [exp] 2025-09-04: audacity: Install Audacity audio editor
 
 ### Rollback steps

@@ -133,6 +133,10 @@ brew install --quiet --cask hammerspoon
 mkdir -p "$HOME/.metrics"
 ## /[exp]
 
+## [exp] 2025-09-23: cursor-cli: Install Cursor CLI tool
+brew install --quiet --cask cursor-cli
+## /[exp]
+
 
 
 # The next line updates PATH for the Google Cloud SDK.
