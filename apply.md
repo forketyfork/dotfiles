@@ -1,5 +1,9 @@
 # Apply steps for the experiments
 
+## [exp] 2025-09-23: cursor-cli: Install Cursor CLI tool
+- add cursor-cli to nix-darwin configuration homebrew.casks
+- remove temporary brew installation from zshrc
+
 ## [exp] 2025-08-11: Hammerspoon: track context switching
 - move `~/.hammerspoon/` to dotfiles
 - install Hammerspoon via nix-darwin configuration
