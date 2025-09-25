@@ -1,5 +1,10 @@
 # Apply steps for the experiments
 
+## [exp] 2025-09-25: atuin: Shell history management tool
+- add atuin to nix-darwin configuration homebrew.brews
+- remove temporary brew installation from zshrc
+- configure atuin initialization in shell configuration
+
 ## [exp] 2025-09-23: cursor-cli: Install Cursor CLI tool
 - add cursor-cli to nix-darwin configuration homebrew.casks
 - remove temporary brew installation from zshrc
