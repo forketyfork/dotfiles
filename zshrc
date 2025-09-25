@@ -137,6 +137,11 @@ mkdir -p "$HOME/.metrics"
 brew install --quiet --cask cursor-cli
 ## /[exp]
 
+## [exp] 2025-09-25: atuin: Shell history management tool
+brew install --quiet atuin
+eval "$(atuin init zsh)"
+## /[exp]
+
 
 
 # The next line updates PATH for the Google Cloud SDK.

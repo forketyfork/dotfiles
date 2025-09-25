@@ -1,5 +1,23 @@
 # Experiment Rollback
 
+## [exp] 2025-09-25: atuin: Shell history management tool
+
+### Rollback steps
+
+```shell
+brew uninstall atuin
+brew cleanup
+rm -rf "$HOME/.local/share/atuin"
+rm -rf "$HOME/.config/atuin"
+```
+
+### Verify
+
+```shell
+> atuin --version
+zsh: command not found: atuin
+```
+
 ## [exp] 2025-09-23: cursor-cli: Install Cursor CLI tool
 
 ### Rollback steps
