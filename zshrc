@@ -105,7 +105,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-fkill() {
+fzkill() {
   local pid=$(ps aux | fzf --header="Select a process to kill" --preview="echo {}" | awk '{print $2}')
 
   if [ -z "$pid" ]; then
