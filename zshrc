@@ -70,9 +70,14 @@ ZSH_THEME="crunch"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws brew helm kubectl cp direnv web-search rust)
+plugins=(git aws brew helm kubectl cp direnv web-search rust procs)
 
 source $ZSH/oh-my-zsh.sh
+
+# Initialize atuin after oh-my-zsh to ensure key bindings aren't overridden
+if command -v atuin &>/dev/null; then
+  eval "$(atuin init zsh)"
+fi
 
 # User configuration
 
@@ -137,9 +142,8 @@ mkdir -p "$HOME/.metrics"
 brew install --quiet --cask cursor-cli
 ## /[exp]
 
-## [exp] 2025-09-25: atuin: Shell history management tool
-brew install --quiet atuin
-eval "$(atuin init zsh)"
+## [exp] 2025-10-06: procs: Modern replacement for ps
+brew install --quiet procs
 ## /[exp]
 
 
