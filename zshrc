@@ -105,6 +105,22 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+fkill() {
+  local pid=$(ps aux | fzf --header="Select a process to kill" --preview="echo {}" | awk '{print $2}')
+
+  if [ -z "$pid" ]; then
+    print -P "%F{yellow}❌ No process selected, operation canceled%f"
+    return 1
+  fi
+
+  if kill "$pid" 2>/dev/null; then
+    print -P "%F{green}✅ Successfully killed process $pid%f"
+  else
+    print -P "%F{red}⚠️  Failed to kill process $pid (may require sudo or process doesn't exist)%f"
+    return 1
+  fi
+}
+
 # to use 1Password as an ssh agent
 if [ "$(uname)" = "Darwin" ]; then
     export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
