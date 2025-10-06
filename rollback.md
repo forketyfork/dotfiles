@@ -1,5 +1,23 @@
 # Experiment Rollback
 
+## [exp] 2025-10-06: procs: Modern replacement for ps
+
+### Rollback steps
+
+```shell
+brew uninstall procs
+brew cleanup
+```
+
+Remove `procs` from oh-my-zsh plugins in `zshrc`.
+
+### Verify
+
+```shell
+> procs --version
+zsh: command not found: procs
+```
+
 ## [exp] 2025-09-25: atuin: Shell history management tool
 
 ### Rollback steps
